@@ -39,7 +39,7 @@
 #set -x
 
 ########################## PARAMETRIZACION
-PATH_LOG="/home/tincho/Scripts/mem_jvm/gc_osbp_server1.log"
+PATH_LOG="/path/to/log.log"
 
 
 
@@ -66,4 +66,4 @@ let "DIFERENCIA = $BEFORE - $AFTER"
 #Salida en formato de check_mk. No hay umbrales ni alarmas definidas, solo metricas.
 FECHA_CHEQUEO=$(date +'%d/%m/%Y %H:%M:%S')
 
-printf "0 JVM_GC_MEMORIA before=%s;;;|after=%s;;;|diferencia=%s Chequeo de %s. Valores leidos %s. Linea leida: %s." "$BEFORE" "$AFTER" "$DIFERENCIA" "$FECHA_CHEQUEO" "$ULTIMA_METRICA" "$ULTIMA_LINEA"
+printf "0 JVM_GC_MEMORIA before=%s;;;|after=%s;;;|diferencia=%s Chequeo de %s. Valores leidos %s. Linea leida: %s \n" "$BEFORE" "$AFTER" "$DIFERENCIA" "$FECHA_CHEQUEO" "$ULTIMA_METRICA" "$ULTIMA_LINEA"
